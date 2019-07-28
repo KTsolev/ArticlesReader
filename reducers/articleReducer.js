@@ -20,20 +20,20 @@ const articleReducer = (state = initialState, action) => {
     case FETCH_ARTICLES_STARTED:
       return {
         ...state,
-        loading: true
+        isLoading: true
       };
     case FETCH_ARTICLES_SUCCESS:
     let newArticles = Object.values(action.payload);
+    let current = state.articles;
       return {
-        ...state,
-        loading: false,
+        isLoading: false,
         error: null,
-        articles: [...state.articles, ...newArticles]
+        articles: [...current, ...newArticles]
       };
     case FETCH_ARTICLES_FAILURE:
       return {
         ...state,
-        loading: false,
+        isLoading: false,
         error: action.payload.error
       };
     break;
