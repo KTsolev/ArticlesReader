@@ -4,19 +4,8 @@ import { View, Text, Image } from "react-native";
 import { Icon } from 'react-native-elements'
 
 class ArticleTile extends React.Component {
-  static navigationOptions = {
-    title: 'NY TIMES MOST POPULAR',
-    headerStyle: {
-      backgroundColor: '#58eda2',
-    },
-    headerTintColor: '#fff',
-    headerTitleStyle: {
-      fontWeight: 'bold',
-    }
-  };
     render() {
       const { article } = this.props;
-      console.log(article);
       return (
         <View style={{ flex: 1, flexDirection: 'row', padding: 10, alignItems: 'center', justifyContent: 'center'}}>
             <Image

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, FlatList } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
 import { connect } from 'react-redux';
 import { fetchArticles } from '../actions/actions';
 import ArticleTile from './ArticleTile';
@@ -23,18 +23,24 @@ class HomeScreen extends React.Component {
             this.setState({articles: this.props.articles});
         }
     }
+
+    onPressHandler(article) {
+      return this.props.navigation.navigate('Details', { url: article.url });
+    }
     
     render() {
     let articles = this.state.articles;
     let isLoading = this.props.isLoading;
 
     return (
-    <View style={{ flex: 1, fledDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        {!isLoading && articles && articles.length > 0 ? <FlatList 
-        data={articles}
-        renderItem={({ item }) => <ArticleTile article={item} />}
-        /> : <Text>Loading articles...</Text>}
-    </View>
+      <View style={{ flex: 1, fledDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+          {!isLoading && articles && articles.length > 0 ? <FlatList 
+          data={articles}
+          renderItem={({ item }) => <TouchableOpacity onPress={this.onPressHandler.bind(this, item)}>
+            <ArticleTile article={item} />
+          </TouchableOpacity>}
+          /> : <Text>Loading articles...</Text>}
+      </View>
     );
     }
   }

@@ -2,6 +2,7 @@
 import React from "react";
 import { View, Text, Button } from "react-native";
 import { headerConfiguration } from './Header';
+import { WebView } from 'react-native-webview';
 
 class ArticleDetails extends React.Component {
     static navigationOptions = headerConfiguration;
@@ -10,15 +11,13 @@ class ArticleDetails extends React.Component {
       const itemId = navigation.getParam('itemId', 'NO-ID');
       const url = navigation.getParam('url', 'some default value');
       return (
-        <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-          <Text>Details Screen</Text>
-          <Text>{url}</Text>
-          <Text>{itemId}</Text>
-          <Button
-            title="Go to Home"
-            onPress={() => this.props.navigation.navigate('Home')}
-          />
-        </View>
+        <WebView
+          source={{ uri: url }}
+          startInLoadingState={false}
+          javaScriptEnabled={true}
+          thirdPartyCookiesEnabled={true}
+          scalesPageToFit
+        />
       );
     }
   }
