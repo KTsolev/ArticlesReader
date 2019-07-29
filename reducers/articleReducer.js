@@ -3,7 +3,7 @@ import {
   FETCH_ARTICLES_STARTED,
   FETCH_ARTICLES_FAILURE,
   ADD_FILTER,
-  REMOVE_FILTER, 
+  RESET_FILTER, 
   LOAD_MORE} from '../actions/actionTypes';
 
 let initialState  = {
@@ -58,11 +58,10 @@ const articleReducer = (state = initialState, action) => {
           filters: newFilters
         }
       }
-     
-    case REMOVE_FILTER:
+    case RESET_FILTER:
       return {
         ...state,
-        filters: []
+        filters: {}
       }
     default:
       return state;

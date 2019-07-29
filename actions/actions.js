@@ -6,7 +6,7 @@ import {
     TOGGLE_FILTERS_OPTIONS,
     TOGGLE_POP_UP_MENU,
     LOAD_MORE,
-    REMOVE_FILTER } from './actionTypes';
+    RESET_FILTER } from './actionTypes';
   
 import axios from 'axios';
 import { API_BASE_URL, API_KEY } from '../config';
@@ -77,6 +77,12 @@ export const getMoreArticles = (page) => {
   };
 };
 
+export const resetAll = (page) => {
+  return dispatch => {
+    dispatch(resetFilter(page));
+  };
+};
+
 export const togglePopUpMenu = (toggle) => ({
   type: TOGGLE_POP_UP_MENU,
   payload: {
@@ -101,6 +107,13 @@ export const addFilter = (filter) => ({
 
 export const loadMore = (page) => ({
   type: LOAD_MORE,
+  payload: {
+    page,
+  }
+});
+
+export const resetFilter = (page) => ({
+  type: RESET_FILTER,
   payload: {
     page,
   }

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import { ButtonGroup, Divider } from 'react-native-elements';
 import { connect } from 'react-redux';
-import { showHideFiltersMenu, addNewFilter } from '../actions/actions';
+import { showHideFiltersMenu, addNewFilter, resetFilter } from '../actions/actions';
 import { Categories , Days } from '../config';
 
 class FiltersMenu extends Component {
@@ -33,6 +33,11 @@ class FiltersMenu extends Component {
     this.props.addNewFilter({ category: category });
   }
 
+  resetFilters() {
+    this.props.resetAll();
+    this.setState({ category: null, days: 0 });
+
+  }
 
   render () {
     const mainButtonStyle = {
@@ -63,7 +68,13 @@ class FiltersMenu extends Component {
     return (
     <ScrollView 
       contentContainerStyle={{ flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: '#00dbb7' }}>
-      <View style={{ width: '100%', height: '20%'}}>    
+      <View style={{ width: '100%', height: '20%'}}>
+        <Divider style={{ width: '100%', height: 2, margin: 2, backgroundColor: '#fff' }} />
+        <TouchableOpacity 
+          onPress={this.resetFilters.bind(this)}
+          style={[mainButtonStyle, inActiveButton]}>
+          <Text style={{ color: '#00dbb7', size: 18, fontWeight: 'bold', padding: 5 }}>Reset Filters</Text>
+        </TouchableOpacity>
         <Divider style={{ width: '100%', height: 2, margin: 2, backgroundColor: '#fff' }} />
         <Text style={{ width: '100%', color: '#fff', size: 18, fontWeight: 'bold', padding: 5 }}>Choose most popular articles for days back:</Text>
         <ButtonGroup
@@ -79,6 +90,7 @@ class FiltersMenu extends Component {
         <Divider style={{ width: '100%', height: 2, margin: 2, backgroundColor: '#fff' }} />
         <Text style={{ width: '100%', color: '#fff', size: 18, fontWeight: 'bold', padding: 5 }}>Choose most category for articles</Text>
         {categories}
+        <Divider style={{ width: '100%', height: 2, margin: 2, backgroundColor: '#fff' }} />
       </View>
     </ScrollView>);
   }
@@ -99,6 +111,9 @@ const mapStateToProps = (state)=> {
       },
       addNewFilter: (filter) => {
         dispatch(addNewFilter(filter));
+      },
+      resetAll: (filter) => {
+        dispatch(resetFilter(filter));
       }
     }
   }
