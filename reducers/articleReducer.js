@@ -2,18 +2,19 @@ import {
   FETCH_ARTICLES_SUCCESS,
   FETCH_ARTICLES_STARTED,
   FETCH_ARTICLES_FAILURE,
-  ADD_FILTER, 
-  REMOVE_FILTER } from '../actions/actionTypes';
+  ADD_FILTER,
+  REMOVE_FILTER, 
+  LOAD_MORE} from '../actions/actionTypes';
 
-const initialState  = {
+let initialState  = {
     isLoading: false,
+    page: 0,
     articles: [],
     filters: {},
     error: null
 }
 
 const articleReducer = (state = initialState, action) => {
-  debugger;
   switch(action.type) {
     case FETCH_ARTICLES_STARTED:
       return {
@@ -21,13 +22,13 @@ const articleReducer = (state = initialState, action) => {
         isLoading: true
       };
     case FETCH_ARTICLES_SUCCESS:
-    let newArticles = Object.values(action.payload);
-    let currentArticles = state.articles;
+    let newArticles = state.articles.concat(Object.values(action.payload));
+    console.log(newArticles, state.articles, action.payload);
       return {
         ...state,
         isLoading: false,
         error: null,
-        articles: [...currentArticles, ...newArticles]
+        articles: [...newArticles]
       };
     case FETCH_ARTICLES_FAILURE:
       return {
@@ -35,14 +36,29 @@ const articleReducer = (state = initialState, action) => {
         isLoading: false,
         error: action.payload.error
       };
+    case LOAD_MORE:
+      let newPage = action.payload.page;
+      return {
+        ...state,
+        page: newPage,
+      };  
     case ADD_FILTER:
       let currentFiters = state.filters;
       let newFilters = Object.assign({}, currentFiters, action.payload.filter);
-      return {
-        ...state,
-        articles: [],
-        filters: newFilters
+      
+      if(newFilters.days !== 1 || newFilters.category !== 'all-section') {
+        return {
+          ...state,
+          articles: [],
+          filters: newFilters
+        }
+      } else {
+        return {
+          ...state,
+          filters: newFilters
+        }
       }
+     
     case REMOVE_FILTER:
       return {
         ...state,

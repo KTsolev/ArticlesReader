@@ -7,10 +7,14 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    top: 0,
+    top: 0
   },
   container: {
-    backgroundColor: '#e1e4e8',
+    backgroundColor: '#ededed',
+    width: 65, 
+    height: 65, 
+    paddingRight: 20, 
+    borderRadius: 50
   },
 });
 
@@ -21,7 +25,7 @@ class ProgressiveImage extends React.Component {
 
   handleThumbnailLoad = () => {
     Animated.timing(this.thumbnailAnimated, {
-      toValue: 1,
+      toValue: 0,
     }).start();
   }
 

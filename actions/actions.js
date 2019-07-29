@@ -5,19 +5,20 @@ import {
     ADD_FILTER, 
     TOGGLE_FILTERS_OPTIONS,
     TOGGLE_POP_UP_MENU,
+    LOAD_MORE,
     REMOVE_FILTER } from './actionTypes';
   
 import axios from 'axios';
 import { API_BASE_URL, API_KEY } from '../config';
 
-export const fetchArticles = (days = 1, category = 'all-sections') => {
+export const fetchArticles = (days = 1, category = 'all-sections', page=0) => {
     console.log(days, category);
 
     return dispatch => {
       dispatch(fetchArticlesStarted());
       axios({
           method: 'get',
-          url: `${API_BASE_URL}/mostpopular/v2/mostviewed/${category}/${days}.json?api-key=${API_KEY}`,
+          url: `${API_BASE_URL}/mostpopular/v2/mostviewed/${category}/${days}.json?api-key=${API_KEY}&offset=${page*10}`,
           headers: {
             'Content-Type': 'application/json'
           },
@@ -65,11 +66,16 @@ export const showHideFiltersMenu = (toggle) => {
 };  
 
 export const addNewFilter = (filter) => {
-  debugger;
   return dispatch => {
     dispatch(addFilter(filter));
   };
 };  
+
+export const getMoreArticles = (page) => {
+  return dispatch => {
+    dispatch(loadMore(page));
+  };
+};
 
 export const togglePopUpMenu = (toggle) => ({
   type: TOGGLE_POP_UP_MENU,
@@ -90,5 +96,12 @@ export const addFilter = (filter) => ({
   type: ADD_FILTER,
   payload: {
     filter,
+  }
+});
+
+export const loadMore = (page) => ({
+  type: LOAD_MORE,
+  payload: {
+    page,
   }
 });

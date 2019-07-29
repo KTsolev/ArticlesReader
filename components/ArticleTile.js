@@ -1,6 +1,6 @@
 
 import React from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text } from "react-native";
 import { Icon } from 'react-native-elements';
 import ProgressiveImage from './ProgresiveImage';
 
@@ -10,9 +10,9 @@ class ArticleTile extends React.Component {
       return <View style={{ flex: 1, flexDirection: 'row', padding: 10, alignItems: 'center', justifyContent: 'center'}}>
             <ProgressiveImage
               style={{ width: 65, height: 65, paddingRight: 20, borderRadius: 50}}
-              thumbnailSource={{ uri: `https://images.pexels.com/photos/671557/pexels-photo-671557.jpeg?w=50&buster=${Math.random()}` }}
+              thumbnailSource={require('../images/dummy-image.png')}
               source={{uri: article.media[0]['media-metadata'][0].url}}
-              resizeMode="cover" />
+              resizeMode="contain" />
             <View style={{ padding: 2, width: '70%', flexDirection: 'column', padding: 10}}>
                 <View style={{ padding: 2, width: '100%', flexDirection: 'column'}}>
                     <Text numberOfLines={2} style={{ fontSize: 14, paddingTop: 5, paddingBottom: 5, color: '#383838', fontWeight: 'bold' }}>{article.title}</Text>

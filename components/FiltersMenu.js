@@ -52,8 +52,9 @@ class FiltersMenu extends Component {
       borderWidth: 1, borderColor: '#fff', backgroundColor: '#31bd85',
     };
         
-    const categories = Categories.map(item => <TouchableOpacity
+    const categories = Categories.map((item, index) => <TouchableOpacity
       activeOpacity={0.7}
+      key={index}
       onPress={this.onPressHandler.bind(this, item)}
       style={this.state.category === item ? [mainButtonStyle, activeButton] : [mainButtonStyle, inActiveButton]}>
         <Text style={this.state.category === item ? [{ size: 10, overflowWrap: 'break-word' }, {color: '#fff'}] : [{ size: 10, overflowWrap: 'break-word' }, {color: '#00dbb7'}]}>{item}</Text>
