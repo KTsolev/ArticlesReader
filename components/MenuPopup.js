@@ -1,6 +1,6 @@
 	
 import React, { Component } from 'react';
-import { View, Text, Image, TouchableOpacity  } from 'react-native';
+import { View, Text, TouchableOpacity  } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { showHidePopupMenu } from '../actions/actions';
@@ -36,7 +36,6 @@ class MenuPopup extends Component {
 }
 
 const mapStateToProps = (state)=> {
-    console.log(state);
     return {
         showPopUpMenu: state.uiElementsState.showPopUpMenu
     }

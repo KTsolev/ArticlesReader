@@ -3,10 +3,10 @@ import { View, TouchableOpacity } from "react-native";
 import { Icon } from 'react-native-elements';
 import { showHideFiltersMenu } from '../actions/actions';
 import { connect } from 'react-redux';
-import FiltersMenu from './FiltersMenu';
 
 class HeaderLeftElement extends React.Component {
-   render(){ 
+    render(){ 
+       const Menu = () => <Menu navigator={navigator}/>;
        return <View style={{ 
            flexDirection: 'row',
            justifyContent: 'flex-start',
@@ -19,7 +19,6 @@ class HeaderLeftElement extends React.Component {
             type='font-awesome'
             color='#fff' />
        </TouchableOpacity>
-       <FiltersMenu />
      </View>
     }
 }

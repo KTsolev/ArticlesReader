@@ -5,14 +5,15 @@ import {
   ADD_FILTER, 
   REMOVE_FILTER } from '../actions/actionTypes';
 
-  const initialState  = {
+const initialState  = {
     isLoading: false,
     articles: [],
-    filters: [],
+    filters: {},
     error: null
 }
 
 const articleReducer = (state = initialState, action) => {
+  debugger;
   switch(action.type) {
     case FETCH_ARTICLES_STARTED:
       return {
@@ -21,11 +22,12 @@ const articleReducer = (state = initialState, action) => {
       };
     case FETCH_ARTICLES_SUCCESS:
     let newArticles = Object.values(action.payload);
-    let current = state.articles;
+    let currentArticles = state.articles;
       return {
+        ...state,
         isLoading: false,
         error: null,
-        articles: [...current, ...newArticles]
+        articles: [...currentArticles, ...newArticles]
       };
     case FETCH_ARTICLES_FAILURE:
       return {
@@ -33,11 +35,19 @@ const articleReducer = (state = initialState, action) => {
         isLoading: false,
         error: action.payload.error
       };
-    break;
     case ADD_FILTER:
-    break;
+      let currentFiters = state.filters;
+      let newFilters = Object.assign({}, currentFiters, action.payload.filter);
+      return {
+        ...state,
+        articles: [],
+        filters: newFilters
+      }
     case REMOVE_FILTER:
-    break;
+      return {
+        ...state,
+        filters: []
+      }
     default:
       return state;
   }

@@ -10,9 +10,6 @@ const initialState  = {
 }
 
 const uiReducer = (state = initialState, action) => {
-  console.log('in reducer');
-  console.log(action);
-
   switch(action.type) {
     case TOGGLE_FILTERS_OPTIONS:
       return {

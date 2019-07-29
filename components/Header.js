@@ -1,6 +1,4 @@
 import React from "react";
-import { View, TouchableOpacity } from "react-native";
-import { Icon } from 'react-native-elements';
 import HeaderRightElement from './HeaderRightElement';
 import HeaderLeftElement from './HeaderLeftElement';
 

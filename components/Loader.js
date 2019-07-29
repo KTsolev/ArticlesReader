@@ -1,7 +1,6 @@
 import React from "react";
 import { View, ActivityIndicator } from "react-native";
 import { headerConfiguration } from './Header';
-import { WebView } from 'react-native-webview';
 
 class Loader extends React.Component {
     static navigationOptions = headerConfiguration;
