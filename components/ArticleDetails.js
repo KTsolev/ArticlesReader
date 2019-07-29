@@ -3,7 +3,6 @@ import React from "react";
 import { WebView } from 'react-native-webview';
 import Loader from './Loader';
 import { headerConfiguration } from './Header';
-import { API_KEY } from '../config';
 
 class ArticleDetails extends React.Component {
   static navigationOptions = ({ navigation }) => headerConfiguration(navigation);
@@ -13,7 +12,7 @@ class ArticleDetails extends React.Component {
       return (
         <WebView
           styles={{position: 'relative'}}
-          source={{ uri: `${url}?&source='New York Times'` }}
+          source={{ uri: url }}
           startInLoadingState={true}
           javaScriptEnabled={true}
           renderLoading={() => <Loader />}
