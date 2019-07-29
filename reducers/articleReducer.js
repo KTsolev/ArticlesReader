@@ -1,5 +1,4 @@
 import { 
-  FETCH_ARTICLES,
   FETCH_ARTICLES_SUCCESS,
   FETCH_ARTICLES_STARTED,
   FETCH_ARTICLES_FAILURE,
@@ -15,8 +14,6 @@ import {
 
 const articleReducer = (state = initialState, action) => {
   switch(action.type) {
-    case FETCH_ARTICLES:
-    break;
     case FETCH_ARTICLES_STARTED:
       return {
         ...state,

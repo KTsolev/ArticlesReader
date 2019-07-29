@@ -1,9 +1,11 @@
 import {
-    FETCH_ARTICLES,
     FETCH_ARTICLES_SUCCESS,
     FETCH_ARTICLES_STARTED,
     FETCH_ARTICLES_FAILURE,
     ADD_FILTER, 
+    FETCH_ARTICLES,
+    TOGGLE_FILTERS_OPTIONS,
+    TOGGLE_POP_UP_MENU,
     REMOVE_FILTER } from './actionTypes';
   
 import axios from 'axios';
@@ -41,3 +43,31 @@ export const fetchArticlesFailure = error => ({
       error
     }
   });
+
+export const showHidePopupMenu = (toggle) => {
+  return dispatch => {
+    dispatch(togglePopUpMenu(toggle));
+
+  };
+};  
+
+export const showHideFiltersMenu = (toggle) => {
+  return dispatch => {
+    dispatch(toggleFiltersMenu(toggle));
+
+  };
+};  
+
+export const togglePopUpMenu = (toggle) => ({
+  type: TOGGLE_POP_UP_MENU,
+  payload: {
+    toggle,
+  }
+});
+
+export const toggleFiltersMenu = (toggle) => ({
+  type: TOGGLE_FILTERS_OPTIONS,
+  payload: {
+    toggle,
+  }
+});

@@ -1,8 +1,20 @@
 import React from "react";
-import { View } from "react-native";
+import { View, TouchableOpacity } from "react-native";
 import { Icon } from 'react-native-elements';
+import HeaderRightElement from './HeaderRightElement';
+import HeaderLeftElement from './HeaderLeftElement';
 
-export const headerConfiguration = {
+const boxWithShadow = {
+  borderWidth: 1,
+  borderRadius: 2,
+  shadowColor: '#000',
+  shadowOffset: { width: 5, height: 5 },
+  shadowOpacity: 0.8,
+  shadowRadius: 4,
+  elevation: 1,
+};
+
+export const headerConfiguration = (navigation) => ({
     title: 'NY TIMES MOST POPULAR',
     headerStyle: {
       backgroundColor: '#00dbb7',
@@ -10,7 +22,8 @@ export const headerConfiguration = {
       marginRight: 10,
       justifyContent: 'center',
       alingContent: 'center',
-      padding: 5
+      padding: 5,
+      boxWithShadow
     },
     headerTintColor: '#fff',
     headerTitleStyle: {
@@ -22,27 +35,11 @@ export const headerConfiguration = {
       minWidth: 230,
       justifyContent: 'flex-start'
     },
+
     headerLeft: (
-      <View style={{ flexDirection: 'row', justifyContent: 'flex-start', padding: 5, maxWidth: 50}}>
-        <Icon
-          name='bars' 
-          size={20} 
-          type='font-awesome'
-          color='#fff' />
-      </View>
+      <HeaderLeftElement />
     ),
     headerRight: (
-      <View style={{ marginLeft: 5, flexDirection: 'row', justifyContent: 'space-between', padding: 5, minWidth: 50}}>
-        <Icon
-          name='search' 
-          size={20} 
-          type='font-awesome'
-          color='#fff' />
-        <Icon 
-          name='ellipsis-v' 
-          size={20} 
-          type='font-awesome'
-          color='#fff' />
-      </View>
+      <HeaderRightElement navigation={navigation} />
     ),
-  };
+  });

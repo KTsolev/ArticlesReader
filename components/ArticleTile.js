@@ -1,13 +1,12 @@
 
 import React from "react";
 import { View, Text, Image } from "react-native";
-import { Icon } from 'react-native-elements'
+import { Icon } from 'react-native-elements';
 
 class ArticleTile extends React.Component {
     render() {
       const { article } = this.props;
-      return (
-        <View style={{ flex: 1, flexDirection: 'row', padding: 10, alignItems: 'center', justifyContent: 'center'}}>
+      return <View style={{ flex: 1, flexDirection: 'row', padding: 10, alignItems: 'center', justifyContent: 'center'}}>
             <Image
               style={{ width: 65, height: 65, paddingRight: 20, borderRadius: 50}}
               source={{uri: article.media[0]['media-metadata'][0].url}}
@@ -32,8 +31,7 @@ class ArticleTile extends React.Component {
             <View style={{ paddingLeft: 20 }}>
               <Icon  name='chevron-right' size={16} type='font-awesome' color='#5b5e61' />
             </View>
-        </View>
-      );
+        </View>;
     }
   }
  
