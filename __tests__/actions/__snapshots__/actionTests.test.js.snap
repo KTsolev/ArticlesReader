@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for Articles Reducer Actions addNewFilter Dispatches the correct action and payload, when new filter for category, has been added 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "filter": Object {
+        "category": "Wine & Dining",
+      },
+    },
+    "type": "ADD_FILTER",
+  },
+]
+`;
+
+exports[`Tests for Articles Reducer Actions addNewFilter Dispatches the correct action and payload, when new filter for days back, has been added 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "filter": Object {
+        "day": 7,
+      },
+    },
+    "type": "ADD_FILTER",
+  },
+]
+`;
+
+exports[`Tests for Articles Reducer Actions addNewFilter Dispatches the correct action and payload, when no filters, has been added 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "filter": undefined,
+    },
+    "type": "ADD_FILTER",
+  },
+]
+`;
+
+exports[`Tests for Articles Reducer Actions getMoreArticles Dispatches the correct action and payload, when getMoreArticles is dispatched 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "page": Object {
+        "page": 2,
+      },
+    },
+    "type": "LOAD_MORE",
+  },
+]
+`;
+
+exports[`Tests for UI Reducer Actions showHideFiltersMenu Dispatches the correct action and payload, when ui filters is opened 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "toggle": true,
+    },
+    "type": "TOGGLE_FILTERS_OPTIONS",
+  },
+]
+`;
+
+exports[`Tests for UI Reducer Actions showHidePopupMenu Dispatches the correct action and payload, when popup is opened 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "toggle": true,
+    },
+    "type": "TOGGLE_POP_UP_MENU",
+  },
+]
+`;
+
+exports[`User Actions showHideFiltersMenu Dispatches the correct action and payload 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "toggle": true,
+    },
+    "type": "TOGGLE_FILTERS_OPTIONS",
+  },
+]
+`;
+
+exports[`User Actions showHidePopupMenu Dispatches the correct action and payload 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "toggle": true,
+    },
+    "type": "TOGGLE_POP_UP_MENU",
+  },
+]
+`;

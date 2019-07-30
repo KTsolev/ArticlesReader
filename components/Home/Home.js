@@ -64,7 +64,7 @@ class HomeScreen extends React.Component {
             renderItem={({item , index}) => <TouchableOpacity onPress={this.onPressHandler.bind(this, item)}>
               <ArticleTile key={index} article={item} />
             </TouchableOpacity>}
-            /> : error || articles.length === 0 ? <Text>'No data were found.</Text> : <ActivityIndicator size="large" color="#23cc9c" /> }
+            /> : error || articles.length === 0 ? <Text>No data were found.</Text> : <ActivityIndicator size="large" color="#23cc9c" /> }
         </View>
       </SideMenu>
     );
