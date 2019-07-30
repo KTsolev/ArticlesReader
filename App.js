@@ -7,8 +7,8 @@
  */
 
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import HomeScreen from './components/Home';
-import ArticleDetails from './components/ArticleDetails';
+import HomeScreen from './components/Home/Home';
+import ArticleDetails from './components/ArticleDetails/ArticleDetails';
 
 const AppNavigator = createStackNavigator({
     Home: {

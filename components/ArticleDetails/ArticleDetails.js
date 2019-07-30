@@ -1,8 +1,8 @@
 
-import React from "react";
+import React from 'react';
 import { WebView } from 'react-native-webview';
-import Loader from './Loader';
-import { headerConfiguration } from './Header';
+import Loader from '../Loader/Loader';
+import { headerConfiguration } from '../Header/Header';
 
 class ArticleDetails extends React.Component {
   static navigationOptions = ({ navigation }) => headerConfiguration(navigation);

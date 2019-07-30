@@ -12,8 +12,6 @@ import axios from 'axios';
 import { API_BASE_URL, API_KEY } from '../config';
 
 export const fetchArticles = (days = 1, category = 'all-sections', page=0) => {
-    console.log(days, category);
-
     return dispatch => {
       dispatch(fetchArticlesStarted());
       axios({

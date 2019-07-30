@@ -1,6 +1,6 @@
-import React from "react";
-import HeaderRightElement from './HeaderRightElement';
-import HeaderLeftElement from './HeaderLeftElement';
+import React from 'react';
+import HeaderRightElement from '../HeaderRightElement/HeaderRightElement';
+import HeaderLeftElement from '../HeaderLeftElement/HeaderLeftElement';
 
 const boxWithShadow = {
   borderWidth: 1,

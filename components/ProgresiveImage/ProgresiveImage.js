@@ -1,22 +1,6 @@
 import React from 'react';
-import { View, StyleSheet, Animated } from 'react-native';
-
-const styles = StyleSheet.create({
-  imageOverlay: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    bottom: 0,
-    top: 0
-  },
-  container: {
-    backgroundColor: '#ededed',
-    width: 65, 
-    height: 65, 
-    paddingRight: 20, 
-    borderRadius: 50
-  },
-});
+import { View, Animated } from 'react-native';
+import { styles } from './ProgressiveImageStyles';
 
 class ProgressiveImage extends React.Component {
   thumbnailAnimated = new Animated.Value(0);
@@ -43,8 +27,10 @@ class ProgressiveImage extends React.Component {
       ...props
     } = this.props;
 
+    const { container, imageOverlay } = style;
+
     return (
-      <View style={styles.container}>
+      <View style={container}>
         <Animated.Image
           {...props}
           source={thumbnailSource}
@@ -55,7 +41,7 @@ class ProgressiveImage extends React.Component {
         <Animated.Image
           {...props}
           source={source}
-          style={[styles.imageOverlay, { opacity: this.imageAnimated }, style]}
+          style={[imageOverlay, { opacity: this.imageAnimated }, style]}
           onLoad={this.onImageLoad}
         />
       </View>

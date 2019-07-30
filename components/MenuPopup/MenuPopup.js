@@ -1,9 +1,9 @@
-	
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity  } from 'react-native';
 import { Icon } from 'react-native-elements';
 import { connect } from 'react-redux';
-import { showHidePopupMenu } from '../actions/actions';
+import { showHidePopupMenu } from '../../actions/actions';
+import { styles } from './MenuPopupStyles';
 
 class MenuPopup extends Component {
   constructor(props) {
@@ -26,8 +26,9 @@ class MenuPopup extends Component {
   };
 
   render() {
-    return this.state.showPopUpMenu ? <View style={{ position: 'absolute', top: '100%', right: 0, width: 120, height: 40, borderWidth: 1, borderColor: '#a8a8a8', backgroundColor: '#ededed' }}>
-          <TouchableOpacity style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', padding: 5, width: '100%', height: '100%' }} onPress={this.clickHandler}>
+    const { container, button } = styles;
+    return this.state.showPopUpMenu ? <View style={container}>
+          <TouchableOpacity style={button} onPress={this.clickHandler}>
             <Icon name='home' size={16} type='font-awesome' color='#5b5e61' />
             <Text>Home Page</Text>
           </TouchableOpacity>

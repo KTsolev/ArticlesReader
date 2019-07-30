@@ -1,11 +1,12 @@
-import React from "react";
-import { View, Text, FlatList, TouchableOpacity, ActivityIndicator } from "react-native";
+import React from 'react';
+import { View, Text, FlatList, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { connect } from 'react-redux';
-import { fetchArticles, getMoreArticles } from '../actions/actions';
-import ArticleTile from './ArticleTile';
-import { headerConfiguration } from './Header';
+import { fetchArticles, getMoreArticles } from '../../actions/actions';
+import ArticleTile from '../ArticleTile/ArticleTile';
+import { headerConfiguration } from '../Header/Header';
 import SideMenu from 'react-native-side-menu';
-import FiltersMenu from './FiltersMenu';
+import FiltersMenu from '../FiltersMenu/FiltersMenu';
+import { styles } from './HomeStyles';
 
 class HomeScreen extends React.Component {
   static navigationOptions = ({ navigation, navigationOptions }) => {
@@ -34,7 +35,6 @@ class HomeScreen extends React.Component {
         || prevProps.filters.days !== this.props.filters.days
         || prevProps.page !== this.props.page
         ) ) {
-          console.log(this.props.page);
         this.props.getArticles(this.props.filters.days, this.props.filters.category, this.props.page);
       }
   }
@@ -52,10 +52,11 @@ class HomeScreen extends React.Component {
     let articles = this.state.articles;
     let isLoading = this.state.isLoading;
     let error = this.state.error;
-    const menu = <FiltersMenu />
+    const menu = <FiltersMenu />;
+    const { container } = styles;
     return (
       <SideMenu menu={menu} isOpen={this.props.showFilters}>
-        <View style={{ flex: 1, fledDirection: 'column', backgroundColor: '#ededed', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
+        <View style={container}>
             {!isLoading && articles && articles.length > 0 ? <FlatList 
             data={articles}
             onEndReached={this.onEndReachedHandler.bind(this)}

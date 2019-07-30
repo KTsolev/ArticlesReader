@@ -23,7 +23,6 @@ const articleReducer = (state = initialState, action) => {
       };
     case FETCH_ARTICLES_SUCCESS:
     let newArticles = state.articles.concat(Object.values(action.payload));
-    console.log(newArticles, state.articles, action.payload);
       return {
         ...state,
         isLoading: false,

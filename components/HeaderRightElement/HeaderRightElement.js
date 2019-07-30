@@ -1,14 +1,15 @@
-import React from "react";
-import { View, TouchableOpacity } from "react-native";
+import React from 'react';
+import { View, TouchableOpacity } from 'react-native';
 import { Icon } from 'react-native-elements';
-import { showHidePopupMenu } from '../actions/actions';
+import { showHidePopupMenu } from '../../actions/actions';
 import { connect } from 'react-redux';
-import MenuPopup from './MenuPopup';
-
+import MenuPopup from '../MenuPopup/MenuPopup';
+import { styles } from './HeaderRightElementStyles';
 
 class HeaderRightElement extends React.Component {
    render(){ 
-       return <View style={{ marginLeft: 5, flexDirection: 'row', justifyContent: 'space-between', padding: 5, minWidth: 50}}>
+       const { container } = styles;
+       return <View style={container}>
             <Icon
             name='search' 
             size={20} 
