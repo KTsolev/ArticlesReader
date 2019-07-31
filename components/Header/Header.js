@@ -16,8 +16,6 @@ export const headerConfiguration = (navigation) => ({
     title: 'NY TIMES MOST POPULAR',
     headerStyle: {
       backgroundColor: '#00dbb7',
-      marginLeft: 10,
-      marginRight: 10,
       justifyContent: 'center',
       alingContent: 'center',
       padding: 5,

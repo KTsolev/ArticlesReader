@@ -1,15 +1,15 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-    filterMenuContainer: { flex: 1, flexDirection: 'column', justifyContent: 'center',
+    filterMenuContainer: { width: '100%', height: '100%', flexDirection: 'column', justifyContent: 'center',
         alignItems: 'center', backgroundColor: '#00dbb7' },
-    filterMenuInnerContainer: { width: '100%', height: '20%'},
+    filterMenuInnerContainer: { width: '100%', height: '30%'},
     filterMnuDivider: { width: '100%', height: 2, margin: 2, backgroundColor: '#fff' },
     filerMenuText: { color: '#00dbb7', fontSize: 14, fontWeight: 'bold', padding: 5 },
     filterMenuTextWholeRowSpanned: { width: '100%', color: '#fff', fontSize: 14, 
         fontWeight: 'bold', padding: 5 },
     filterMenuButtonWrapper: { flexDirection: 'row', flexWrap: 'wrap', width: '100%',
-         height: '80%' },
+         height: '70%' },
     mainButtonStyle: { flexDirection: 'column', justifyContent: 'center', 
     alignItems: 'center', minHeight: 30, padding: 2, height: 'auto' },
     inActiveButton: { borderWidth: 1, borderColor: '#00dbb7', backgroundColor: '#fff' },
