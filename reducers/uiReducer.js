@@ -4,7 +4,7 @@ import {
 } from '../actions/actionTypes';
 
 
-const initialState  = {
+let initialState  = {
     showPopUpMenu: false,
     showFilters: false
 }

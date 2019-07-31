@@ -88,7 +88,7 @@ describe('Tests for UI Reducer Actions', () => {
             results: mockedData
           }
         });
-        console.log(store.getActions());
+       
         expect(store.getActions()[0].type).toEqual('FETCH_ARTICLES_STARTED');
         expect(store.getActions()[1].type).toEqual('FETCH_ARTICLES_SUCCESS');        
         expect(Object.values(store.getActions()[1].payload)).toHaveLength(6);
@@ -105,7 +105,7 @@ describe('Tests for UI Reducer Actions', () => {
             message: 'No connection'
           }
         });
-        console.log(store.getActions());
+
         expect(store.getActions()[0].type).toEqual('FETCH_ARTICLES_STARTED');
         expect(store.getActions()[1].type).toEqual('FETCH_ARTICLES_FAILURE');        
         expect(Object.values(store.getActions()[1].payload)).toEqual([{'error': {'message': 'No connection'}}]);
