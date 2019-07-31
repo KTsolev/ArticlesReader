@@ -2,7 +2,8 @@ Description
 Article Reader - Simple App that fetches and displays articles fetched from ny.times.com API
 
 Instalation
-npm install
+npm install 
+and then
 react-native link
 
 Run Tests
