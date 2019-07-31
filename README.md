@@ -5,6 +5,8 @@ Instalation
 npm install 
 and then
 react-native link
+for IOS 
+cd /ios folder of project and run pod install
 
 Run Tests
 just tests - npm run test
