@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderLeftElement /> renders the component 1`] = `
+<HeaderLeftElement
+  navigation={
+    Object {
+      "getParam": [Function],
+      "navigate": [MockFunction],
+    }
+  }
+  showFilters={false}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  toggleFilters={[Function]}
+/>
+`;

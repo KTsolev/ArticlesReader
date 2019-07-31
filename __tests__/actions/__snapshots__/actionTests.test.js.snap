@@ -37,6 +37,622 @@ Array [
 ]
 `;
 
+exports[`Tests for Articles Reducer Actions fetchArticles Dispatches the correct action and payload, when getMoreArticles is dispatched 1`] = `
+Array [
+  Object {
+    "type": "FETCH_ARTICLES_STARTED",
+  },
+  Object {
+    "payload": Object {
+      "0": Object {
+        "abstract": "A jury found that the singer’s 2013 hit copied elements of a 2008 Christian rap song called “Joyful Noise.”",
+        "adx_keywords": "Dark Horse (Movie);Perry, Katy;Copyrights and Copyright Violations;Suits and Litigation (Civil);Flame (1981- );Pop and Rock Music;Gottwald, Lukasz (Dr Luke)",
+        "asset_id": 100000006636355,
+        "byline": "By BEN SISARIO",
+        "column": null,
+        "des_facet": Array [
+          "COPYRIGHTS AND COPYRIGHT VIOLATIONS",
+          "SUITS AND LITIGATION (CIVIL)",
+        ],
+        "geo_facet": "",
+        "id": 100000006636355,
+        "media": Array [
+          Object {
+            "approved_for_syndication": 1,
+            "caption": "A nine-person jury returned a unanimous verdict that Katy Perry’s “Dark Horse” had infringed the copyright of a song by the artist Flame.",
+            "copyright": "Kevin Winter/Getty Images For Coachella",
+            "media-metadata": Array [
+              Object {
+                "format": "square320",
+                "height": 320,
+                "url": "https://static01.nyt.com/images/2019/07/29/arts/29darkhorse/29darkhorse-square320.jpg",
+                "width": 320,
+              },
+              Object {
+                "format": "Standard Thumbnail",
+                "height": 75,
+                "url": "https://static01.nyt.com/images/2019/07/29/arts/29darkhorse/29darkhorse-thumbStandard.jpg",
+                "width": 75,
+              },
+              Object {
+                "format": "Normal",
+                "height": 127,
+                "url": "https://static01.nyt.com/images/2019/07/29/arts/29darkhorse/merlin_153541674_64052ed4-9abb-458a-b79c-1ce277fb3513-articleInline.jpg",
+                "width": 190,
+              },
+              Object {
+                "format": "Large",
+                "height": 263,
+                "url": "https://static01.nyt.com/images/2019/07/29/arts/29darkhorse/29darkhorse-sfSpan.jpg",
+                "width": 395,
+              },
+              Object {
+                "format": "Jumbo",
+                "height": 683,
+                "url": "https://static01.nyt.com/images/2019/07/29/arts/29darkhorse/merlin_153541674_64052ed4-9abb-458a-b79c-1ce277fb3513-jumbo.jpg",
+                "width": 1024,
+              },
+              Object {
+                "format": "superJumbo",
+                "height": 1366,
+                "url": "https://static01.nyt.com/images/2019/07/29/arts/29darkhorse/merlin_153541674_64052ed4-9abb-458a-b79c-1ce277fb3513-superJumbo.jpg",
+                "width": 2048,
+              },
+              Object {
+                "format": "square640",
+                "height": 640,
+                "url": "https://static01.nyt.com/images/2019/07/29/arts/29darkhorse/29darkhorse-square640.jpg",
+                "width": 640,
+              },
+              Object {
+                "format": "Large Thumbnail",
+                "height": 150,
+                "url": "https://static01.nyt.com/images/2019/07/29/arts/29darkhorse/29darkhorse-thumbLarge.jpg",
+                "width": 150,
+              },
+              Object {
+                "format": "mediumThreeByTwo210",
+                "height": 140,
+                "url": "https://static01.nyt.com/images/2019/07/29/arts/29darkhorse/merlin_153541674_64052ed4-9abb-458a-b79c-1ce277fb3513-mediumThreeByTwo210.jpg",
+                "width": 210,
+              },
+              Object {
+                "format": "mediumThreeByTwo440",
+                "height": 293,
+                "url": "https://static01.nyt.com/images/2019/07/29/arts/29darkhorse/merlin_153541674_64052ed4-9abb-458a-b79c-1ce277fb3513-mediumThreeByTwo440.jpg",
+                "width": 440,
+              },
+            ],
+            "subtype": "photo",
+            "type": "image",
+          },
+        ],
+        "org_facet": Array [
+          "POP AND ROCK MUSIC",
+        ],
+        "per_facet": Array [
+          "PERRY, KATY",
+          "FLAME (1981- )",
+          "GOTTWALD, LUKASZ (DR LUKE)",
+        ],
+        "published_date": "2019-07-29",
+        "section": "Arts",
+        "source": "The New York Times",
+        "title": "Katy Perry Loses Copyright Battle Over ‘Dark Horse’",
+        "type": "Article",
+        "url": "https://www.nytimes.com/2019/07/29/arts/music/katy-perry-dark-horse-copyright.html",
+        "views": 1,
+      },
+      "1": Object {
+        "abstract": "The switch from the MetroCard to tapping a credit card or smartphone is a major milestone for the struggling subway.",
+        "adx_keywords": "Subways;Transit Systems;Smartphones;MetroCard (NYC);Credit Cards;Prices (Fares, Fees and Rates);Metropolitan Transportation Authority;New York City",
+        "asset_id": 100000006620472,
+        "byline": "By EMMA G. FITZSIMMONS",
+        "column": null,
+        "des_facet": Array [
+          "SUBWAYS",
+          "TRANSIT SYSTEMS",
+          "SMARTPHONES",
+          "METROCARD (NYC)",
+        ],
+        "geo_facet": Array [
+          "NEW YORK CITY",
+        ],
+        "id": 100000006620472,
+        "media": Array [
+          Object {
+            "approved_for_syndication": 1,
+            "caption": "A rider used his smartphone to pay the fare at Grand Central Station. New York City’s subway is introducing a contactless payment system that accepts credit cards and smartphone payments.",
+            "copyright": "Michelle V. Agins/The New York Times",
+            "media-metadata": Array [
+              Object {
+                "format": "square320",
+                "height": 320,
+                "url": "https://static01.nyt.com/images/2019/07/29/nyregion/29SUBWAYFARES/29SUBWAYFARES-square320.jpg",
+                "width": 320,
+              },
+              Object {
+                "format": "Standard Thumbnail",
+                "height": 75,
+                "url": "https://static01.nyt.com/images/2019/07/29/nyregion/29SUBWAYFARES/29SUBWAYFARES-thumbStandard.jpg",
+                "width": 75,
+              },
+              Object {
+                "format": "Normal",
+                "height": 127,
+                "url": "https://static01.nyt.com/images/2019/07/29/nyregion/29SUBWAYFARES/merlin_158131344_6ca03844-3b48-4f1f-b5c0-77299d5e147a-articleInline.jpg",
+                "width": 190,
+              },
+              Object {
+                "format": "Large",
+                "height": 263,
+                "url": "https://static01.nyt.com/images/2019/07/29/nyregion/29SUBWAYFARES/merlin_158131344_6ca03844-3b48-4f1f-b5c0-77299d5e147a-sfSpan.jpg",
+                "width": 395,
+              },
+              Object {
+                "format": "Jumbo",
+                "height": 683,
+                "url": "https://static01.nyt.com/images/2019/07/29/nyregion/29SUBWAYFARES/merlin_158131344_6ca03844-3b48-4f1f-b5c0-77299d5e147a-jumbo.jpg",
+                "width": 1024,
+              },
+              Object {
+                "format": "superJumbo",
+                "height": 1365,
+                "url": "https://static01.nyt.com/images/2019/07/29/nyregion/29SUBWAYFARES/merlin_158131344_6ca03844-3b48-4f1f-b5c0-77299d5e147a-superJumbo.jpg",
+                "width": 2048,
+              },
+              Object {
+                "format": "square640",
+                "height": 640,
+                "url": "https://static01.nyt.com/images/2019/07/29/nyregion/29SUBWAYFARES/29SUBWAYFARES-square640.jpg",
+                "width": 640,
+              },
+              Object {
+                "format": "Large Thumbnail",
+                "height": 150,
+                "url": "https://static01.nyt.com/images/2019/07/29/nyregion/29SUBWAYFARES/29SUBWAYFARES-thumbLarge.jpg",
+                "width": 150,
+              },
+              Object {
+                "format": "mediumThreeByTwo210",
+                "height": 140,
+                "url": "https://static01.nyt.com/images/2019/07/29/nyregion/29SUBWAYFARES/29SUBWAYFARES-mediumThreeByTwo210-v2.jpg",
+                "width": 210,
+              },
+              Object {
+                "format": "mediumThreeByTwo440",
+                "height": 293,
+                "url": "https://static01.nyt.com/images/2019/07/29/nyregion/29SUBWAYFARES/29SUBWAYFARES-mediumThreeByTwo440-v2.jpg",
+                "width": 440,
+              },
+            ],
+            "subtype": "photo",
+            "type": "image",
+          },
+        ],
+        "org_facet": Array [
+          "CREDIT CARDS",
+          "PRICES (FARES, FEES AND RATES)",
+          "METROPOLITAN TRANSPORTATION AUTHORITY",
+        ],
+        "per_facet": "",
+        "published_date": "2019-07-30",
+        "section": "New York",
+        "source": "The New York Times",
+        "title": "So Long, Swiping. The ‘Tap-and-Go’ Subway Is Here.",
+        "type": "Article",
+        "url": "https://www.nytimes.com/2019/07/30/nyregion/metrocard-mta-subway-discontinued.html",
+        "views": 2,
+      },
+      "2": Object {
+        "abstract": "A “disgruntled” former employee opened fire at dawn, killing two employees and striking a police officer in the back, officials said. The officer was saved by his bulletproof vest.",
+        "adx_keywords": "Murders, Attempted Murders and Homicides;Walmart Stores Inc;Mississippi;Southaven, Mississippi;Attacks on Police",
+        "asset_id": 100000006636945,
+        "byline": "By SARAH MERVOSH",
+        "column": null,
+        "des_facet": Array [
+          "MURDERS, ATTEMPTED MURDERS AND HOMICIDES",
+          "ATTACKS ON POLICE",
+        ],
+        "geo_facet": Array [
+          "MISSISSIPPI",
+          "SOUTHAVEN, MISSISSIPPI",
+        ],
+        "id": 100000006636945,
+        "media": Array [
+          Object {
+            "approved_for_syndication": 1,
+            "caption": "Paramedics offering medical attention after the shooting at a Walmart in Southaven, Miss. The victims were supervisors at the store, the mayor said.  ",
+            "copyright": "Brandon Dill/Associated Press",
+            "media-metadata": Array [
+              Object {
+                "format": "square320",
+                "height": 320,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/30xp-shooting1/30xp-shooting1-square320.jpg",
+                "width": 320,
+              },
+              Object {
+                "format": "Standard Thumbnail",
+                "height": 75,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/30xp-shooting1/30xp-shooting1-thumbStandard.jpg",
+                "width": 75,
+              },
+              Object {
+                "format": "Normal",
+                "height": 126,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/30xp-shooting1/merlin_158647170_623598c3-d7c7-4b95-bfd0-73493c7e9603-articleInline.jpg",
+                "width": 190,
+              },
+              Object {
+                "format": "Large",
+                "height": 263,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/30xp-shooting1/30xp-shooting1-sfSpan.jpg",
+                "width": 395,
+              },
+              Object {
+                "format": "Jumbo",
+                "height": 682,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/30xp-shooting1/merlin_158647170_623598c3-d7c7-4b95-bfd0-73493c7e9603-jumbo.jpg",
+                "width": 1024,
+              },
+              Object {
+                "format": "superJumbo",
+                "height": 1363,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/30xp-shooting1/merlin_158647170_623598c3-d7c7-4b95-bfd0-73493c7e9603-superJumbo.jpg",
+                "width": 2048,
+              },
+              Object {
+                "format": "square640",
+                "height": 640,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/30xp-shooting1/30xp-shooting1-square640.jpg",
+                "width": 640,
+              },
+              Object {
+                "format": "Large Thumbnail",
+                "height": 150,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/30xp-shooting1/30xp-shooting1-thumbLarge.jpg",
+                "width": 150,
+              },
+              Object {
+                "format": "mediumThreeByTwo210",
+                "height": 140,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/30xp-shooting1/30xp-shooting1-mediumThreeByTwo210.jpg",
+                "width": 210,
+              },
+              Object {
+                "format": "mediumThreeByTwo440",
+                "height": 293,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/30xp-shooting1/30xp-shooting1-mediumThreeByTwo440.jpg",
+                "width": 440,
+              },
+            ],
+            "subtype": "photo",
+            "type": "image",
+          },
+        ],
+        "org_facet": Array [
+          "WALMART STORES INC",
+        ],
+        "per_facet": "",
+        "published_date": "2019-07-30",
+        "section": "U.S.",
+        "source": "The New York Times",
+        "title": "Shooting at Walmart in Mississippi Kills 2",
+        "type": "Article",
+        "url": "https://www.nytimes.com/2019/07/30/us/walmart-shooting-mississippi.html",
+        "views": 3,
+      },
+      "3": Object {
+        "abstract": "Moderate underdogs kick off Detroit debates by targeting the top candidates with charges of “wish-list economics” and “impossible promises” on health care.",
+        "adx_keywords": "Presidential Election of 2020;Debates (Political);United States Politics and Government;Biden, Joseph R Jr;Delaney, John (1963- );Harris, Kamala D;Hickenlooper, John W;Klobuchar, Amy;Detroit (Mich)",
+        "asset_id": 100000006637118,
+        "byline": "By ALEXANDER BURNS and JONATHAN MARTIN",
+        "column": null,
+        "des_facet": Array [
+          "PRESIDENTIAL ELECTION OF 2020",
+          "DEBATES (POLITICAL)",
+        ],
+        "geo_facet": Array [
+          "DETROIT (MICH)",
+        ],
+        "id": 100000006637118,
+        "media": Array [
+          Object {
+            "approved_for_syndication": 1,
+            "caption": "Senators Bernie Sanders and Elizabeth Warren defended their policies during the Democratic presidential debate in Detroit on Tuesday.",
+            "copyright": "Erin Schaff/The New York Times",
+            "media-metadata": Array [
+              Object {
+                "format": "square320",
+                "height": 320,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-ledeall-1/30debate-ledeall-1-square320-v2.jpg",
+                "width": 320,
+              },
+              Object {
+                "format": "Standard Thumbnail",
+                "height": 75,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-ledeall-1/30debate-ledeall-1-thumbStandard-v2.jpg",
+                "width": 75,
+              },
+              Object {
+                "format": "Normal",
+                "height": 127,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-ledeall-1/30debate-ledeall-1-articleInline-v2.jpg",
+                "width": 190,
+              },
+              Object {
+                "format": "Large",
+                "height": 263,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-ledeall-1/30debate-ledeall-1-sfSpan-v2.jpg",
+                "width": 395,
+              },
+              Object {
+                "format": "Jumbo",
+                "height": 683,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-ledeall-1/30debate-ledeall-1-jumbo-v2.jpg",
+                "width": 1024,
+              },
+              Object {
+                "format": "superJumbo",
+                "height": 1365,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-ledeall-1/30debate-ledeall-1-superJumbo-v2.jpg",
+                "width": 2048,
+              },
+              Object {
+                "format": "square640",
+                "height": 640,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-ledeall-1/30debate-ledeall-1-square640-v2.jpg",
+                "width": 640,
+              },
+              Object {
+                "format": "Large Thumbnail",
+                "height": 150,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-ledeall-1/30debate-ledeall-1-thumbLarge-v2.jpg",
+                "width": 150,
+              },
+              Object {
+                "format": "mediumThreeByTwo210",
+                "height": 140,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-ledeall-1/30debate-ledeall-1-mediumThreeByTwo210-v2.jpg",
+                "width": 210,
+              },
+              Object {
+                "format": "mediumThreeByTwo440",
+                "height": 293,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-ledeall-1/30debate-ledeall-1-mediumThreeByTwo440-v2.jpg",
+                "width": 440,
+              },
+            ],
+            "subtype": "photo",
+            "type": "image",
+          },
+        ],
+        "org_facet": Array [
+          "UNITED STATES POLITICS AND GOVERNMENT",
+        ],
+        "per_facet": Array [
+          "BIDEN, JOSEPH R JR",
+          "DELANEY, JOHN (1963- )",
+          "HARRIS, KAMALA D",
+          "HICKENLOOPER, JOHN W",
+          "KLOBUCHAR, AMY",
+        ],
+        "published_date": "2019-07-30",
+        "section": "U.S.",
+        "source": "The New York Times",
+        "title": "Sanders and Warren Battle Accusations of ‘Fairy Tale’ Promises as Intraparty Rift Flares",
+        "type": "Article",
+        "url": "https://www.nytimes.com/2019/07/30/us/politics/democratic-presidential-debate-recap.html",
+        "views": 4,
+      },
+      "4": Object {
+        "abstract": "Everything you need to know about the presidential primary debate in Detroit.",
+        "adx_keywords": "Presidential Election of 2020;Debates (Political);Bullock, Steve;Buttigieg, Pete (1982- );Castro, Julian;Sanders, Bernard;Warren, Elizabeth;Detroit (Mich)",
+        "asset_id": 100000006634931,
+        "byline": "By SHANE GOLDMACHER and KATIE GLUECK",
+        "column": null,
+        "des_facet": Array [
+          "PRESIDENTIAL ELECTION OF 2020",
+          "DEBATES (POLITICAL)",
+        ],
+        "geo_facet": Array [
+          "DETROIT (MICH)",
+        ],
+        "id": 100000006634931,
+        "media": Array [
+          Object {
+            "approved_for_syndication": 1,
+            "caption": "",
+            "copyright": "Doug Mills/The New York Times",
+            "media-metadata": Array [
+              Object {
+                "format": "square320",
+                "height": 320,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-one/merlin_157116021_fb54bbdc-acc7-4369-8f4c-c6ce12e2726a-square320.jpg",
+                "width": 320,
+              },
+              Object {
+                "format": "Standard Thumbnail",
+                "height": 75,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-one/merlin_157116021_fb54bbdc-acc7-4369-8f4c-c6ce12e2726a-thumbStandard.jpg",
+                "width": 75,
+              },
+              Object {
+                "format": "Normal",
+                "height": 127,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-one/merlin_157116021_fb54bbdc-acc7-4369-8f4c-c6ce12e2726a-articleInline.jpg",
+                "width": 190,
+              },
+              Object {
+                "format": "Large",
+                "height": 263,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-one/merlin_157116021_fb54bbdc-acc7-4369-8f4c-c6ce12e2726a-sfSpan.jpg",
+                "width": 395,
+              },
+              Object {
+                "format": "Jumbo",
+                "height": 683,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-one/merlin_157116021_fb54bbdc-acc7-4369-8f4c-c6ce12e2726a-jumbo.jpg",
+                "width": 1024,
+              },
+              Object {
+                "format": "superJumbo",
+                "height": 1365,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-one/merlin_157116021_fb54bbdc-acc7-4369-8f4c-c6ce12e2726a-superJumbo.jpg",
+                "width": 2048,
+              },
+              Object {
+                "format": "square640",
+                "height": 640,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-one/merlin_157116021_fb54bbdc-acc7-4369-8f4c-c6ce12e2726a-square640.jpg",
+                "width": 640,
+              },
+              Object {
+                "format": "Large Thumbnail",
+                "height": 150,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-one/merlin_157116021_fb54bbdc-acc7-4369-8f4c-c6ce12e2726a-thumbLarge.jpg",
+                "width": 150,
+              },
+              Object {
+                "format": "mediumThreeByTwo210",
+                "height": 140,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-one/merlin_157116021_fb54bbdc-acc7-4369-8f4c-c6ce12e2726a-mediumThreeByTwo210.jpg",
+                "width": 210,
+              },
+              Object {
+                "format": "mediumThreeByTwo440",
+                "height": 293,
+                "url": "https://static01.nyt.com/images/2019/07/30/us/politics/30debate-one/merlin_157116021_fb54bbdc-acc7-4369-8f4c-c6ce12e2726a-mediumThreeByTwo440.jpg",
+                "width": 440,
+              },
+            ],
+            "subtype": "photo",
+            "type": "image",
+          },
+        ],
+        "org_facet": "",
+        "per_facet": Array [
+          "BULLOCK, STEVE",
+          "BUTTIGIEG, PETE (1982- )",
+          "CASTRO, JULIAN",
+          "SANDERS, BERNARD",
+          "WARREN, ELIZABETH",
+        ],
+        "published_date": "2019-07-30",
+        "section": "U.S.",
+        "source": "The New York Times",
+        "title": "What to Watch for in Tuesday’s CNN Democratic Debate",
+        "type": "Article",
+        "url": "https://www.nytimes.com/2019/07/30/us/politics/democratic-debate-time.html",
+        "views": 5,
+      },
+      "5": Object {
+        "abstract": "Trump and his views are the real infestations in America.",
+        "adx_keywords": "Trump, Donald J;Race and Ethnicity;Discrimination;Blacks;Social Media;Cummings, Elijah E;Minorities;United States Politics and Government",
+        "asset_id": 100000006632196,
+        "byline": "By CHARLES M. BLOW",
+        "column": null,
+        "des_facet": Array [
+          "RACE AND ETHNICITY",
+          "DISCRIMINATION",
+          "MINORITIES",
+          "UNITED STATES POLITICS AND GOVERNMENT",
+        ],
+        "geo_facet": "",
+        "id": 100000006632196,
+        "media": Array [
+          Object {
+            "approved_for_syndication": 1,
+            "caption": "President Trump.",
+            "copyright": "Doug Mills/The New York Times",
+            "media-metadata": Array [
+              Object {
+                "format": "square320",
+                "height": 320,
+                "url": "https://static01.nyt.com/images/2019/07/28/opinion/28blow/28blow-square320.jpg",
+                "width": 320,
+              },
+              Object {
+                "format": "Standard Thumbnail",
+                "height": 75,
+                "url": "https://static01.nyt.com/images/2019/07/28/opinion/28blow/28blow-thumbStandard.jpg",
+                "width": 75,
+              },
+              Object {
+                "format": "Normal",
+                "height": 136,
+                "url": "https://static01.nyt.com/images/2019/07/28/opinion/28blow/merlin_158109828_84bbafbb-9de7-45d3-9994-ae01cc1f8478-articleInline.jpg",
+                "width": 190,
+              },
+              Object {
+                "format": "Large",
+                "height": 263,
+                "url": "https://static01.nyt.com/images/2019/07/28/opinion/28blow/28blow-sfSpan.jpg",
+                "width": 395,
+              },
+              Object {
+                "format": "Jumbo",
+                "height": 731,
+                "url": "https://static01.nyt.com/images/2019/07/28/opinion/28blow/merlin_158109828_84bbafbb-9de7-45d3-9994-ae01cc1f8478-jumbo.jpg",
+                "width": 1024,
+              },
+              Object {
+                "format": "superJumbo",
+                "height": 1461,
+                "url": "https://static01.nyt.com/images/2019/07/28/opinion/28blow/merlin_158109828_84bbafbb-9de7-45d3-9994-ae01cc1f8478-superJumbo.jpg",
+                "width": 2048,
+              },
+              Object {
+                "format": "square640",
+                "height": 640,
+                "url": "https://static01.nyt.com/images/2019/07/28/opinion/28blow/28blow-square640.jpg",
+                "width": 640,
+              },
+              Object {
+                "format": "Large Thumbnail",
+                "height": 150,
+                "url": "https://static01.nyt.com/images/2019/07/28/opinion/28blow/28blow-thumbLarge.jpg",
+                "width": 150,
+              },
+              Object {
+                "format": "mediumThreeByTwo210",
+                "height": 140,
+                "url": "https://static01.nyt.com/images/2019/07/28/opinion/28blow/28blow-mediumThreeByTwo210.jpg",
+                "width": 210,
+              },
+              Object {
+                "format": "mediumThreeByTwo440",
+                "height": 293,
+                "url": "https://static01.nyt.com/images/2019/07/28/opinion/28blow/28blow-mediumThreeByTwo440.jpg",
+                "width": 440,
+              },
+            ],
+            "subtype": "photo",
+            "type": "image",
+          },
+        ],
+        "org_facet": Array [
+          "BLACKS",
+          "SOCIAL MEDIA",
+        ],
+        "per_facet": Array [
+          "TRUMP, DONALD J",
+          "CUMMINGS, ELIJAH E",
+        ],
+        "published_date": "2019-07-28",
+        "section": "Opinion",
+        "source": "The New York Times",
+        "title": "The Rot You Smell Is a Racist Potus",
+        "type": "Article",
+        "url": "https://www.nytimes.com/2019/07/28/opinion/trump-racist-baltimore.html",
+        "views": 6,
+      },
+    },
+    "type": "FETCH_ARTICLES_SUCCESS",
+  },
+]
+`;
+
 exports[`Tests for Articles Reducer Actions getMoreArticles Dispatches the correct action and payload, when getMoreArticles is dispatched 1`] = `
 Array [
   Object {
@@ -46,6 +662,30 @@ Array [
       },
     },
     "type": "LOAD_MORE",
+  },
+]
+`;
+
+exports[`Tests for Articles Reducer Actions getMoreArticles Dispatches the correct action and payload, when getMoreArticles is dispatched 2`] = `
+Array [
+  Object {
+    "payload": Object {
+      "page": Object {
+        "page": 2,
+      },
+    },
+    "type": "LOAD_MORE",
+  },
+]
+`;
+
+exports[`Tests for UI Reducer Actions resetAll Dispatches the correct action and payload, when filters are reset 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "page": undefined,
+    },
+    "type": "RESET_FILTER",
   },
 ]
 `;
@@ -62,28 +702,6 @@ Array [
 `;
 
 exports[`Tests for UI Reducer Actions showHidePopupMenu Dispatches the correct action and payload, when popup is opened 1`] = `
-Array [
-  Object {
-    "payload": Object {
-      "toggle": true,
-    },
-    "type": "TOGGLE_POP_UP_MENU",
-  },
-]
-`;
-
-exports[`User Actions showHideFiltersMenu Dispatches the correct action and payload 1`] = `
-Array [
-  Object {
-    "payload": Object {
-      "toggle": true,
-    },
-    "type": "TOGGLE_FILTERS_OPTIONS",
-  },
-]
-`;
-
-exports[`User Actions showHidePopupMenu Dispatches the correct action and payload 1`] = `
 Array [
   Object {
     "payload": Object {

@@ -11,10 +11,10 @@ class HeaderRightElement extends React.Component {
        const { container } = styles;
        return <View style={container}>
             <Icon
-            name='search' 
-            size={20} 
-            type='font-awesome'
-            color='#fff' />
+              name='search' 
+              size={20} 
+              type='font-awesome'
+              color='#fff' />
             <TouchableOpacity onPress={() => this.props.togglePopup(!this.props.showPopUpMenu)}>  
               <Icon 
                 name='ellipsis-v' 

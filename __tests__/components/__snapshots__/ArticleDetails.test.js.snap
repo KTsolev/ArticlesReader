@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArticleDetails /> renders the component 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+      "overflow": "hidden",
+    }
+  }
+>
+  <_class
+    cacheEnabled={true}
+    javaScriptEnabled={true}
+    key="webViewKey"
+    messagingEnabled={false}
+    onLoadingError={[Function]}
+    onLoadingFinish={[Function]}
+    onLoadingProgress={[Function]}
+    onLoadingStart={[Function]}
+    onMessage={[Function]}
+    onShouldStartLoadWithRequest={[Function]}
+    scalesPageToFit={true}
+    sharedCookiesEnabled={true}
+    source={
+      Object {
+        "uri": "https://jestjs.io/?api-key=qWO5J56rRa4sdwmDlndp4wv5EEAZecAR",
+      }
+    }
+    startInLoadingState={true}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "overflow": "hidden",
+        },
+        Object {
+          "backgroundColor": "#ffffff",
+        },
+        undefined,
+      ]
+    }
+    styles={
+      Object {
+        "position": "relative",
+      }
+    }
+    thirdPartyCookiesEnabled={true}
+    useSharedProcessPool={true}
+  />
+  <Loader />
+</View>
+`;

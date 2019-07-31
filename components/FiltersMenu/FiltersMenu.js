@@ -59,10 +59,13 @@ class FiltersMenu extends Component {
     const categories = Categories.map((item, index) => <TouchableOpacity
       activeOpacity={0.7}
       key={index}
+      testID={item}
       onPress={this.onPressHandler.bind(this, item)}
       style={this.state.category === item ? [mainButtonStyle, activeButton] : [mainButtonStyle, inActiveButton]}>
         <Text style={this.state.category === item ? [mainButtonText, activeButtonText] : [mainButtonText, inActiveButtonText]}>{item}</Text>
       </TouchableOpacity>)
+
+     const days = Days.map((item, index) => <Text key={index} testID={item} >{item}</Text>);
     
     return (
       <ScrollView contentContainerStyle={filterMenuContainer}>
@@ -70,21 +73,22 @@ class FiltersMenu extends Component {
           <Divider style={filterMnuDivider} />
           <TouchableOpacity 
             onPress={this.resetFilters.bind(this)}
+            testID={'clearAll'}
             style={[mainButtonStyle, inActiveButton]}>
             <Text style={filerMenuText}>Reset Filters</Text>
           </TouchableOpacity>
           <Divider style={filterMnuDivider} />
           <Text style={filterMenuTextWholeRowSpanned}>Choose most popular articles for days back:</Text>
           <ButtonGroup
+              testID={'daysHolder'}
               onPress={this.updateIndex}
               selectedIndex={this.state.days}
-              containerStyle={{color: '#00dbb7'}}
               selectedButtonStyle={{backgroundColor: '#31bd85'}}
               selectedTextStyle={{color: '#fff'}}
               textStyle={{color: '#00dbb7'}}
-              buttons={Days} />
+              buttons={days} />
         </View>
-        <View style={filterMenuButtonWrapper}>
+        <View style={filterMenuButtonWrapper} testID={'categoriesHolder'}>
           <Divider style={filterMnuDivider} />
           <Text style={filterMenuTextWholeRowSpanned}>Choose most category for articles</Text>
           {categories}

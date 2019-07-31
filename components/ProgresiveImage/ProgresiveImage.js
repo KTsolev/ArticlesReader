@@ -15,7 +15,7 @@ class ProgressiveImage extends React.Component {
 
   onImageLoad = () => {
     Animated.timing(this.imageAnimated, {
-      toValue: 1,
+      toValue: 1, 
     }).start();
   }
 
@@ -27,7 +27,7 @@ class ProgressiveImage extends React.Component {
       ...props
     } = this.props;
 
-    const { container, imageOverlay } = style;
+    const { container, imageOverlay } = styles;
 
     return (
       <View style={container}>

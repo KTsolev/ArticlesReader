@@ -18,4 +18,4 @@ const RNRedux = () => (
   )
   
 
-AppRegistry.registerComponent(appName, () => RNRedux);
+export default AppRegistry.registerComponent(appName, () => RNRedux);

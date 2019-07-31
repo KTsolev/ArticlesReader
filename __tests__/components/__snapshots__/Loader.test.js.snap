@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> renders the component 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "rgba(0, 179, 149, 0.35)",
+      "bottom": 0,
+      "justifyContent": "center",
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+      "zIndex": 1,
+    }
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#fff"
+    hidesWhenStopped={true}
+    size="large"
+  />
+</View>
+`;
